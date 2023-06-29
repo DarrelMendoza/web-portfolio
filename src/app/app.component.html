@@ -1,0 +1,30 @@
+
+<div class="splashBody">
+    <div class="splashScreen">
+      <div class="loadingContainer">
+        <div class="loadingBox">
+            <img src="assets/dmlogoblack.png" alt="Image description" class="splashLogo">
+          <div class="loadingBarContainer">
+            <div class="loadingbar"></div>
+          </div>
+          <!-- <div class="loadingCircle">
+            <div class="circleOuter"></div>
+            <div class="circleLoader"></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="content" [class.visibleContent]="isContentLoaded">
+    <app-navbar></app-navbar>
+    <app-landing-page></app-landing-page>
+    <app-about-page></app-about-page>
+    <app-github-graph></app-github-graph>
+    <app-chatbot></app-chatbot>
+    <app-footer></app-footer>
+  </div>
+
+
+  
+  

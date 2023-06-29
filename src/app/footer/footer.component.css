@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.about-page {
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+}
+
+.about-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0%; /* Add some padding to the text */
+}
+
+.about-content h1 {
+    color: #fff;
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 3.5em;
+    margin-bottom: 1em;
+}
+
+.about-content p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.about-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%; /* Add some padding to the image */
+}
+
+.about-image img {
+    max-width: 85%; /* Adjust this value to control the size of the image */
+    height: auto;
+}
