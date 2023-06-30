@@ -20,6 +20,7 @@
     <h3 class="chatbox__title">Chat Assistant</h3>
     <span class="material-symbols-outlined">close</span>
   </div>
+<!--   
   <ul class="chatbot__box" #chatList>
     <li class="chatbot__chat" [class.incoming]="message.sender === 'bot'" [class.outgoing]="message.sender === 'user'" *ngFor="let message of messages">
       <img *ngIf="message.sender === 'bot'" src="assets/robot.png" alt="Image description" style="width: 50px; height: 50px; margin-right: 5px;">
@@ -47,5 +48,16 @@
       (keydown.enter)="sendUserMessage(textarea); $event.preventDefault()"
     ></textarea>
     <span id="send-btn" class="material-symbols-outlined" (click)="sendUserMessage(textarea)">send</span>
+  </div> -->
+
+  <div class="chatbot__input-box">
+    <span id="send-btn" class="material-symbols-outlined">send</span>
   </div>
+
+  <iframe
+    src="https://www.chatbase.co/chatbot-iframe/TfCuvnDn9sdDYgaX0tbe5"
+    width="100%"
+    style="height: 100%; min-height: 650px;"
+    frameborder="1"
+  ></iframe>
 </div>
