@@ -22,12 +22,12 @@
   </div>
   <ul class="chatbot__box" #chatList>
     <li class="chatbot__chat" [class.incoming]="message.sender === 'bot'" [class.outgoing]="message.sender === 'user'" *ngFor="let message of messages">
-      <img *ngIf="message.sender === 'bot'" src="assets/dmlogoblack.png" alt="Image description" style="width: 50px; height: 50px; margin-right: 5px;">
+      <img *ngIf="message.sender === 'bot'" src="assets/robot.png" alt="Image description" style="width: 50px; height: 50px; margin-right: 5px;">
       <p>{{ message.text }}</p>
     </li>
     <li class="chatbot__chat incoming" *ngIf="botTyping">
       <div class="message-container">
-        <img src="assets/dmlogoblack.png" alt="Image description" style="width: 50px; height: 50px; margin-right: 5px;">
+        <img src="assets/robot.png" alt="Image description" style="width: 50px; height: 50px; margin-right: 5px;">
         <div class="typing-indicator">
           <span></span>
           <span></span>
