@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,6 +14,7 @@ import { ChatbotComponent } from './chatbot/chatbot.component'; // Make sure the
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -26,12 +28,14 @@ import { ProjectsPageComponent } from './projects-page/projects-page.component';
     LoadingScreenComponent,
     ChatbotComponent,
     FooterComponent,
-    ProjectsPageComponent
+    ProjectsPageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [ChatbotService],
   bootstrap: [AppComponent]

@@ -1,12 +1,22 @@
 <nav class="menubar">
-    <div class="logo">
-        <img src="assets/all-white-logo-dm.png" width="60" alt="logo">
-    </div>
-    <ul class="navigation">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/experience">Experience</a></li>
-      <li><a routerLink="/projects">Projects</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="logo">
+      <img src="assets/all-white-logo-dm.png" width="60" alt="logo">
+  </div>
+  <ul class="navigation">
+    <li (click)="toLandingPage()" [ngClass]="{ 'active': isLinkActive('/landing-page') }">
+      <a routerLink="/landing-page">Home</a>
+    </li>
+    <li (click)="toAboutPage()" [ngClass]="{ 'active': isLinkActive('/about-page') }">
+      <a routerLink="/about-page">About</a>
+    </li>
+    <li (click)="toExperiencePage()" [ngClass]="{ 'active': isLinkActive('/experience-page') }">
+      <a routerLink="/experience-page">Experience</a>
+    </li>
+    <li (click)="toProjectsPage()" [ngClass]="{ 'active': isLinkActive('/projects-page') }">
+      <a routerLink="/projects-page">Projects</a>
+    </li>
+    <li (click)="toContactsPage()" [ngClass]="{ 'active': isLinkActive('/contacts-page') }">
+      <a routerLink="/contacts-page">Contact</a>
+    </li>
+  </ul>
+</nav>
