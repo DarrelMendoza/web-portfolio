@@ -12,6 +12,7 @@ import { ChatbotService } from './chatbot.service';
 import { ChatbotComponent } from './chatbot/chatbot.component'; // Make sure the path is correct
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
+import { ProjectsPageComponent } from './projects-page/projects-page.component';
 
 
 
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     GithubGraphComponent,
     LoadingScreenComponent,
     ChatbotComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsPageComponent
   ],
   imports: [
     BrowserModule,
