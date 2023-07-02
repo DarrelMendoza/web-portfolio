@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,15 +6,20 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
 export class NavbarComponent implements OnInit {
 
   constructor(private router: Router) { }
+  activeLink: string = '/landing-page';
+  previousActiveLink: string = '/landing-page';
+
 
   ngOnInit(): void {
+    this.onScroll();
   }
 
   isLinkActive(link: string): boolean {
-    return this.router.url === link;
+    return this.activeLink === link;
   }
 
   toLandingPage(){
@@ -36,4 +41,26 @@ export class NavbarComponent implements OnInit {
   toContactsPage(){
     document.getElementById("footer").scrollIntoView({behavior:"smooth"});
   }
+
+  @HostListener('window:scroll', ['$event'])
+onScroll() {
+  const sections = [
+    { id: 'landing-page', link: '/landing-page' },
+    { id: 'about-page', link: '/about-page' },
+    { id: 'github-graph', link: '/experience-page' },
+    { id: 'projects-page', link: '/projects-page' },
+    { id: 'footer', link: '/contacts-page' }
+  ];
+
+  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+  for (const section of sections) {
+    const element = document.getElementById(section.id);
+    if (element && scrollPosition >= element.offsetTop - 100) {
+      this.previousActiveLink = this.activeLink;
+      this.activeLink = section.link;
+    }
+  }
+}
+
 }
