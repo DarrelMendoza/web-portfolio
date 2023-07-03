@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+.experience-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 115vh;
+  background-color: #ffffff;
+  padding: 5%;
+}
+
+.experience-content {
+  width: 45%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+  box-sizing: border-box;
+}
+
+.experience-content h1 {
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.experience-image {
+  width: 55%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 5%;
+}
+
+.job {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 5%;
+  box-sizing: border-box;
+}
+
+.job-info {
+  display: flex;
+  align-items: center;
+}
+
+.job-info .year {
+    margin-right: 3.4em;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.job-info .job-icon {
+  max-width: 36px;
+  height: auto;
+  margin-right: 0px;
+  margin-bottom: 25px;
+}
+
+.job-info .job-details h1.role {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.job-info .job-details h2.company {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.job p.description {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0 10%;
+  margin-left: 60px;
+}
+
+.job-details{
+    margin-left: 10px;
+}
+
+.job-info .job-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .job-info .job-link:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .job-info .job-link:focus {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+  
+  .job-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .job-icon:hover {
+    transform: scale(1.1);
+  }
