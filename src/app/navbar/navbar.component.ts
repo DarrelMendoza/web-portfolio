@@ -31,7 +31,7 @@ export class NavbarComponent implements OnInit {
   }
 
   toExperiencePage(){
-    document.getElementById("github-graph").scrollIntoView({behavior:"smooth"});
+    document.getElementById("experience-page").scrollIntoView({behavior:"smooth"});
   }
 
   toProjectsPage(){
@@ -47,7 +47,7 @@ onScroll() {
   const sections = [
     { id: 'landing-page', link: '/landing-page' },
     { id: 'about-page', link: '/about-page' },
-    { id: 'github-graph', link: '/experience-page' },
+    { id: 'experience-page', link: '/experience-page' },
     { id: 'projects-page', link: '/projects-page' },
     { id: 'footer', link: '/contacts-page' }
   ];
