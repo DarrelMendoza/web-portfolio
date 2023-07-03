@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { HomeComponent } from './home/home.component';
 import { ExperiencePageComponent } from './experience-page/experience-page.component';
+import { SkillsComponent } from './skills/skills.component';
 
 
 
@@ -31,7 +32,8 @@ import { ExperiencePageComponent } from './experience-page/experience-page.compo
     FooterComponent,
     ProjectsPageComponent,
     HomeComponent,
-    ExperiencePageComponent
+    ExperiencePageComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

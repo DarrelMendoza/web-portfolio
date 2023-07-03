@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+.skills-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  padding: 0% 5%;
+}
+
+.skills-content {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 5% 5%;
+}
+
+.h1container{
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-bottom: 10%;
+}
+
+.skills-content2 {
+  width: 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 16%;
+  padding-left: 5%;
+}
+
+.icon-set {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 3%;
+  box-sizing: border-box;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+}
+
+.logos .year {
+    margin-right: 3.4em;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.logos .job-icon {
+  max-width: 36px;
+  height: auto;
+  margin-right: 0px;
+  margin-bottom: 25px;
+}
+
+.logos .logo-details h1.role {
+  font-size: 1.2em;
+  font-weight: 620;
+  margin-bottom: 8%;
+}
+
+.logos .logo-details h2.company {
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.icon-set p.description {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0 10%;
+  margin-left: 60px;
+}
+
+.logo-details{
+    margin-left: 10px;
+}
+
+.logos .job-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .logos .job-link:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .logos .job-link:focus {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+  
+  .job-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .job-icon:hover {
+    transform: scale(1.1);
+  }
+
+/* Social Icon Mixin */
+@mixin social-icon($color) {
+  background: $color;
+  color: #fff;
+
+  .tooltip {
+    background: $color;
+    color: currentColor;
+
+    &:after {
+      border-top-color: $color;
+    }
+  }
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 2.5rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+
+  &:hover {
+    color: #fff;
+
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-50%, -150%);
+    }
+  }
+    
+  &:active {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+  }
+
+    /* Color Variables */
+  $color-bootstrap: #553d7c;
+  $color-javascript: #e4d04b;
+  $color-html: #f15931;
+  $color-css: #254de3;
+  $color-react: #43c3ec;
+  $color-reactnative: #43c3ec;
+  $color-angular: #e23237;
+  $color-ionic: #3880ff;
+  $color-jasper: #005f9e;
+  $color-tailwind: #01b7d6;
+  $color-sass: #cf649a;
+  $color-jquery: #0868ac;
+  $color-chartjs: #f27175;
+  $color-typescript: #2d79c7;
+  $color-php: #4b568c;
+  $color-laravel: #f22b1e;
+  $color-aws: #f29100;
+  $color-mysql: #005c85;
+  $color-phpmyadmin: #e76c00;
+  $color-postgresql: #30628a;
+  $color-sqlite: #2f92ce;
+  $color-plsql: #820b48;
+  $color-talend: #183e66;
+  $color-oracleapex: #bd4231;
+  $color-nodejs: #92b54c;
+  $color-vagrant: #1178f2;
+
+
+  
+  &--bootstrap { @include social-icon($color-bootstrap); }
+  &--javascript { @include social-icon($color-javascript); }
+  &--html { @include social-icon($color-html); }
+  &--css { @include social-icon($color-css); }
+  &--react { @include social-icon($color-react); }
+  &--reactnative { @include social-icon($color-reactnative); }
+  &--angular { @include social-icon($color-angular); }
+  &--ionic { @include social-icon($color-ionic); }
+  &--jasper { @include social-icon($color-jasper); }
+  &--tailwind { @include social-icon($color-tailwind); }
+  &--sass { @include social-icon($color-sass); }
+  &--jquery { @include social-icon($color-jquery); }
+  &--chartjs { @include social-icon($color-chartjs); }
+  &--typescript { @include social-icon($color-typescript); }
+  &--php { @include social-icon($color-php); }
+  &--laravel { @include social-icon($color-laravel); }
+  &--aws { @include social-icon($color-aws); }
+  &--mysql { @include social-icon($color-mysql); }
+  &--phpmyadmin { @include social-icon($color-phpmyadmin); }
+  &--postgresql { @include social-icon($color-postgresql); }
+  &--sqlite { @include social-icon($color-sqlite); }
+  &--plsql { @include social-icon($color-plsql); }
+  &--talend { @include social-icon($color-talend); }
+  &--oracleapex { @include social-icon($color-oracleapex); }
+  &--nodejs { @include social-icon($color-nodejs); }
+  &--vagrant { @include social-icon($color-vagrant); }
+
+
+
+
+
+  
+  i {
+    position: relative;
+    top: 1px;
+  }
+}
+
+/* Tooltips */
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.8rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+  
+  &:after {
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    content: "";
+    border: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: transparent;
+    transform: translate(-50%, 100%);
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
