@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { HomeComponent } from './home/home.component';
+import { ExperiencePageComponent } from './experience-page/experience-page.component';
 
 
 
@@ -29,7 +30,8 @@ import { HomeComponent } from './home/home.component';
     ChatbotComponent,
     FooterComponent,
     ProjectsPageComponent,
-    HomeComponent
+    HomeComponent,
+    ExperiencePageComponent
   ],
   imports: [
     BrowserModule,
