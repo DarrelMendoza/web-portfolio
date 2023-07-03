@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
 .contribution-page {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 100vh;
+    height: 85vh;
     text-align: center;
 }
 
@@ -28,7 +30,7 @@
 }
 
 .description {
-    margin-top: -140px;
+    margin-top: -100px;
     width: 50%;
     align-self: flex-end;
     text-align: left;
