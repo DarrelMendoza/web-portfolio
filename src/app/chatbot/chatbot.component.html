@@ -15,40 +15,11 @@
   <span class="material-symbols-outlined" *ngIf="!showChatBox">mode_comment</span>
   <span class="material-symbols-outlined" *ngIf="showChatBox">close</span>
 </button>
-<div [class.chatbot-active]="showChatBox" class="chatbot">
+<div [class.chatbot-active]="showChatBox" class="chatbot" style="z-index: 9999;">
   <div class="chatbot__header">
     <h3 class="chatbox__title">Chat Assistant</h3>
     <span class="material-symbols-outlined">close</span>
   </div>
-<!--   
-  <ul class="chatbot__box" #chatList>
-    <li class="chatbot__chat" [class.incoming]="message.sender === 'bot'" [class.outgoing]="message.sender === 'user'" *ngFor="let message of messages">
-      <img *ngIf="message.sender === 'bot'" src="assets/robot.png" alt="Image description" style="width: 50px; height: 50px; margin-right: 5px;">
-      <p>{{ message.text }}</p>
-    </li>
-    <li class="chatbot__chat incoming" *ngIf="botTyping">
-      <div class="message-container">
-        <img src="assets/robot.png" alt="Image description" style="width: 50px; height: 50px; margin-right: 5px;">
-        <div class="typing-indicator">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </li>
-    
-  </ul>
-  
-  <div class="chatbot__input-box">
-    <textarea
-      #textarea
-      class="chatbot__textarea"
-      placeholder="Enter a message..."
-      required
-      (keydown.enter)="sendUserMessage(textarea); $event.preventDefault()"
-    ></textarea>
-    <span id="send-btn" class="material-symbols-outlined" (click)="sendUserMessage(textarea)">send</span>
-  </div> -->
 
   <div class="chatbot__input-box">
     <span id="send-btn" class="material-symbols-outlined">send</span>
