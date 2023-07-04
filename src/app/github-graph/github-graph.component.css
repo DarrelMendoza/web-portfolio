@@ -7,6 +7,7 @@
     justify-content: space-around;
     height: 85vh;
     text-align: center;
+    padding: 0% 1%;
 }
 
 .contribution-page h1 {
@@ -19,7 +20,7 @@
 
 .graph {
     margin-top: 0px;
-    width: 90%;
+    width: 65%;
     margin-left: auto;
     margin-right: auto;
 }
