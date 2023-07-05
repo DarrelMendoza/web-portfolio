@@ -34,8 +34,16 @@ export class NavbarComponent implements OnInit {
     document.getElementById("experience-page").scrollIntoView({behavior:"smooth"});
   }
 
+  toSkillsPage(){
+    document.getElementById("skills-page").scrollIntoView({behavior:"smooth"});
+  }
+
   toProjectsPage(){
     document.getElementById("projects-page").scrollIntoView({behavior:"smooth"});
+  }
+
+  toBlogsPage(){
+    document.getElementById("blogs-page").scrollIntoView({behavior:"smooth"});
   }
 
   toContactsPage(){
@@ -48,7 +56,9 @@ onScroll() {
     { id: 'landing-page', link: '/landing-page' },
     { id: 'about-page', link: '/about-page' },
     { id: 'experience-page', link: '/experience-page' },
+    { id: 'skills-page', link: '/skills-page' },
     { id: 'projects-page', link: '/projects-page' },
+    { id: 'blogs-page', link: '/blogs-page' },
     { id: 'footer', link: '/contacts-page' }
   ];
 

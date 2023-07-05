@@ -13,7 +13,7 @@ export class GithubGraphComponent implements OnInit {
   ngAfterViewInit() {
     GithubCalendar("#calendar", "DarrelMendoza", {
       responsive: true,
-      tooltips: false,
+      tooltips: true,
       global_stats: false,
       cache: 1, // in days
       summary_text: "contributions in the last year",

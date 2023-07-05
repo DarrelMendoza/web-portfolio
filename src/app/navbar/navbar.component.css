@@ -22,7 +22,7 @@ ul {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-left: 244px;
+  margin-left: 110px;
 }
 
 .navigation {
@@ -30,7 +30,7 @@ ul {
   display: flex;
   font-family: DM Sans;
   cursor: pointer;
-  margin-right: 200px;
+  margin-right: 80px;
 }
 
 .navigation li {

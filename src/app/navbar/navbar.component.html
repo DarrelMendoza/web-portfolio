@@ -12,8 +12,14 @@
     <li (click)="toExperiencePage()" [ngClass]="{ 'active': isLinkActive('/experience-page') }">
       <a routerLink="/experience-page">Experience</a>
     </li>
+    <li (click)="toSkillsPage()" [ngClass]="{ 'active': isLinkActive('/skills-page') }">
+      <a routerLink="/skills-page">Skills</a>
+    </li>
     <li (click)="toProjectsPage()" [ngClass]="{ 'active': isLinkActive('/projects-page') }">
       <a routerLink="/projects-page">Projects</a>
+    </li>
+    <li (click)="toBlogsPage()" [ngClass]="{ 'active': isLinkActive('/blogs-page') }">
+      <a routerLink="/blogs-page">Blogs</a>
     </li>
     <li (click)="toContactsPage()" [ngClass]="{ 'active': isLinkActive('/contacts-page') }">
       <a routerLink="/contacts-page">Contact</a>
