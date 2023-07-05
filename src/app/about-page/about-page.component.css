@@ -39,6 +39,6 @@
 }
 
 .about-image img {
-    max-width: 100%; /* Adjust this value to control the size of the image */
+    max-width: 80%; /* Adjust this value to control the size of the image */
     height: auto;
 }
