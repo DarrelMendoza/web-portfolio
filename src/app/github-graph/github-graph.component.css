@@ -41,10 +41,10 @@
 }
 
 .description {
-    margin-top: -100px;
     width: 50%;
     align-self: flex-end;
     text-align: left;
+    margin-bottom: 7%;
 }
 
 .description p {
