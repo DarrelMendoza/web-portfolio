@@ -3,7 +3,7 @@
 .about-page {
     display: flex;
     height: 100vh;
-    background-color: #343434;
+    background-color: #b4b0ab;
 }
 
 .about-content {
@@ -16,7 +16,7 @@
 }
 
 .about-content h1 {
-    color: #fff;
+    color: #343434;
     font-family: DM Sans;
     font-weight: bold;
     font-size: 3.5em;
@@ -24,7 +24,7 @@
 }
 
 .about-content p {
-    color: #fff;
+    color: #343434;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5em;
     line-height: 1.6;
@@ -39,6 +39,6 @@
 }
 
 .about-image img {
-    max-width: 100%; /* Adjust this value to control the size of the image */
+    max-width: 80%; /* Adjust this value to control the size of the image */
     height: auto;
 }
