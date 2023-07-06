@@ -11,7 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
     />
 <!-- Code :) -->
-<button class="chatbot__button" (click)="toggleChatBox()">
+
+<div id="chatBubble" class="chatBubble">
+  <p>Got a question? Ask me!</p>
+</div>
+
+<button id="chatbotButton" class="chatbot__button" (click)="toggleChatBox()">
   <span class="material-symbols-outlined" *ngIf="!showChatBox">mode_comment</span>
   <span class="material-symbols-outlined" *ngIf="showChatBox">close</span>
 </button>

@@ -14,9 +14,25 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
 
   constructor() {}
 
-  ngOnInit() {
-    this.addMessage("Hi there. How can I help you today?", "bot");
-  }
+// Your existing Angular code goes here
+
+ngOnInit() {
+  this.addMessage("Hi there. How can I help you today?", "bot");
+
+  // Show the chat bubble 10 seconds after the page loads
+  setTimeout(() => {
+    document.getElementById('chatBubble').style.opacity = '1';
+
+    // Make the button bounce while the chat bubble is displayed
+    document.getElementById('chatbotButton').style.animation = 'bounce 1s infinite';
+
+    // Hide the chat bubble and stop the button from bouncing after the bubble's been displayed for 10 seconds
+    setTimeout(() => {
+      document.getElementById('chatBubble').style.opacity = '0';
+      document.getElementById('chatbotButton').style.animation = 'none';
+    }, 10000); // 10000 milliseconds = 10 seconds
+  }, 1000); // 1000 milliseconds = 1 second
+}
 
   ngAfterViewChecked() {
     this.scrollToBottom();
@@ -34,6 +50,8 @@ export class ChatbotComponent implements OnInit, AfterViewChecked {
 
   toggleChatBox(): void {
     this.showChatBox = !this.showChatBox;
+    document.getElementById('chatBubble').style.opacity = '0';
+    document.getElementById('chatbotButton').style.animation = 'none';
   }
 
   addMessage(text: string, sender: string) {
