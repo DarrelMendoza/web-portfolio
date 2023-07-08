@@ -254,6 +254,7 @@ from, to { transform: scale(1, 1); }
   $color-jasper: #005f9e;
   $color-tailwind: #01b7d6;
   $color-sass: #cf649a;
+  $color-less: #172b4a;
   $color-jquery: #0868ac;
   $color-chartjs: #f27175;
   $color-typescript: #2d79c7;
@@ -263,6 +264,7 @@ from, to { transform: scale(1, 1); }
   $color-mysql: #005c85;
   $color-phpmyadmin: #e76c00;
   $color-postgresql: #30628a;
+  $color-java: #3a75b0;
   $color-sqlite: #2f92ce;
   $color-plsql: #820b48;
   $color-talend: #183e66;
@@ -283,6 +285,7 @@ from, to { transform: scale(1, 1); }
   &--jasper { @include social-icon($color-jasper); }
   &--tailwind { @include social-icon($color-tailwind); }
   &--sass { @include social-icon($color-sass); }
+  &--less { @include social-icon($color-less); }
   &--jquery { @include social-icon($color-jquery); }
   &--chartjs { @include social-icon($color-chartjs); }
   &--typescript { @include social-icon($color-typescript); }
@@ -292,6 +295,7 @@ from, to { transform: scale(1, 1); }
   &--mysql { @include social-icon($color-mysql); }
   &--phpmyadmin { @include social-icon($color-phpmyadmin); }
   &--postgresql { @include social-icon($color-postgresql); }
+  &--java { @include social-icon($color-java); }
   &--sqlite { @include social-icon($color-sqlite); }
   &--plsql { @include social-icon($color-plsql); }
   &--talend { @include social-icon($color-talend); }

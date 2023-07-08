@@ -6,7 +6,7 @@
   <h1 class="header">Recent Projects</h1>
 
   <div class="container">
-    <div class="card" (click)="openModal()">
+    <div class="card" (click)="openModal(0)">
         <div class="face face1" style="background-color: #3ebaad !important;">
             <div class="content">
               <img src="./assets/medtechpro-white.png" alt="Image 1">
@@ -18,11 +18,11 @@
               <p>The Ultimate Hospital Management App designed to revolutionize 
                 healthcare administration. Made using Angular, PHP, Laravel, SQL
               </p>
-              <div class="btn" style="background-color: #3ebaad; color: #fff;" (click)="openModal()">LEARN MORE</div>
+              <div class="btn" style="background-color: #3ebaad; color: #fff;" (click)="openModal(0)">LEARN MORE</div>
             </div>
         </div>
     </div>
-    <div class="card" (click)="openModal()">
+    <div class="card" (click)="openModal(1)">
         <div class="face face1" style="background-color: #0687ff !important">
             <div class="content">
               <img src="./assets/badbeat-white.png" alt="Image 1">
@@ -34,11 +34,11 @@
                 <p>The number one destination for all things trendy and fashionable!
                    Made using PHP, HTML, CSS, Javascript, SQL
                 </p>
-                <div class="btn" style="background-color: #0687ff; color: #fff;" (click)="openModal()">LEARN MORE</div>
+                <div class="btn" style="background-color: #0687ff; color: #fff;" (click)="openModal(1)">LEARN MORE</div>
             </div>
         </div>
     </div>
-    <div class="card" (click)="openModal()">
+    <div class="card" (click)="openModal(2)">
       <div class="face face1" style="background-color: #5a5a5a !important">
           <div class="content">
             <img src="./assets/storefront-white.png" alt="Image 1">
@@ -50,7 +50,7 @@
               <p>Online platform that revolutionizes the way buyers and sellers interact in the digital marketplace. 
                 Created using Angular, PHP, Laravel, SQL
               </p>
-              <div class="btn" style="background-color: #5a5a5a; color: #fff;" (click)="openModal()">LEARN MORE</div>
+              <div class="btn" style="background-color: #5a5a5a; color: #fff;" (click)="openModal(2)">LEARN MORE</div>
           </div>
       </div>
   </div>
@@ -73,27 +73,21 @@
           </div>
           <!-- We use *ngFor to iterate over the images array and ngClass to add the 'active' class to the currentImage -->
           <ul class="image-list">
-            <li class="image-item" *ngFor="let img of images; let i = index" (click)="changeImage(i)">
+            <li class="image-item" *ngFor="let img of projectImages[currentProjectIndex]; let i = index" (click)="changeImage(i)">
               <img [src]="img" [ngClass]="{'active': currentImage === img}">
             </li>
           </ul>
         </div>
       </div>
       <div class="column-xs-12 column-md-5">
-        <h1>MedTech Pro</h1>
-        <h2 style="font-size: 20px;">Revolutionizing Healthcare, One System at a Time.</h2>
+        <h1>{{ projectNames[currentProjectIndex] }}</h1>
+        <h2 style="font-size: 20px;">Revolutionizing {{ projectIndustries[currentProjectIndex] }}, One System at a Time.</h2>
         <div class="description">
-          <p>MEDTECHPRO Hospital Management System is a state-of-the-art, comprehensive solution designed to revolutionize 
-            the way hospitals operate. Developed with a deep understanding of the complex challenges that modern healthcare providers face, 
-            this system ensures efficient hospital management while enhancing the quality of patient care.</p>
-          <p>At MEDTECHPRO, we believe that better hospital management leads to better patient outcomes. And that's why we're 
-            committed to delivering a solution that helps healthcare providers do what they do best – care for their patients. 
-            Choose MEDTECHPRO: the pulse of modern hospital management.</p>
+          <p [innerHTML]="projectDescriptions[currentProjectIndex]"></p>
         </div>
         <button class="add-to-cart">View Repository</button>
       </div>
     </div>
   </div>
 </div>
-
 
