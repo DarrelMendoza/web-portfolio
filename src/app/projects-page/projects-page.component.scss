@@ -236,6 +236,7 @@
 .image-list .image-item {
   margin: 10px;
   flex-basis: 100%;
+  cursor: pointer;
 }
 
 .image-list img {
@@ -305,4 +306,8 @@ h2 {
   .product-gallery {
     order: -1;
   }
+}
+
+.image-list img.active {
+  border: 2px solid #4a4a4b;
 }

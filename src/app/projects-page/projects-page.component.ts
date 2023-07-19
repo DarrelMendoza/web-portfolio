@@ -9,11 +9,12 @@ export class ProjectsPageComponent implements OnInit {
   currentProjectIndex: number = -1;
   currentImage: string = '';
   modalOpen: boolean = false;
+  selectedImageIndex: number = 0;
   
   projectImages: string[][] = [
     ['./assets/projects/medtechpro-image1.png', './assets/projects/medtechpro-image2.png', './assets/projects/medtechpro-image3.png'],
-    ['./assets/projects/badbeat-image1.png', './assets/projects/badbeat-image3.png', './assets/projects/badbeat-image3.png'],
-    ['./assets/projects/storefront-image1.png', './assets/projects/storefront-image1.png', './assets/projects/storefront-image1.png']
+    ['./assets/projects/badbeat-image1.png', './assets/projects/badbeat-image2.png', './assets/projects/badbeat-image3.png'],
+    ['./assets/projects/storefront-image1.png', './assets/projects/storefront-image2.png', './assets/projects/storefront-image3.png']
   ];
   
   projectNames: string[] = [
@@ -37,7 +38,17 @@ export class ProjectsPageComponent implements OnInit {
   constructor(private renderer: Renderer2, private el: ElementRef) { }
 
   ngOnInit(): void {
-    this.renderer.listen('window', 'click',(event:Event)=>{this.onClickOutsideModal(event)});
+    this.renderer.listen('window', 'click', (event: Event) => {
+      this.onClickOutsideModal(event);
+    });
+    
+    // Reset selected image index when the modal is closed
+    const modal = document.getElementById('myModal');
+    modal.addEventListener('transitionend', () => {
+      if (!this.modalOpen) {
+        this.selectedImageIndex = 0;
+      }
+    });
   }
   
   openModal(index: number) {
@@ -55,6 +66,7 @@ export class ProjectsPageComponent implements OnInit {
   }
   
   changeImage(index: number) {
+    this.selectedImageIndex = index;
     this.currentImage = this.projectImages[this.currentProjectIndex][index];
   }
 

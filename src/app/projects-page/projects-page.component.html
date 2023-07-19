@@ -74,7 +74,7 @@
           <!-- We use *ngFor to iterate over the images array and ngClass to add the 'active' class to the currentImage -->
           <ul class="image-list">
             <li class="image-item" *ngFor="let img of projectImages[currentProjectIndex]; let i = index" (click)="changeImage(i)">
-              <img [src]="img" [ngClass]="{'active': currentImage === img}">
+              <img [src]="img" [ngClass]="{'active': i === selectedImageIndex}">
             </li>
           </ul>
         </div>
