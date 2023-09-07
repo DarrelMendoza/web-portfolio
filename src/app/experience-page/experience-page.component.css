@@ -111,3 +111,91 @@
   .job-icon:hover {
     transform: scale(1.1);
   }
+
+  /* Media Queries */
+@media only screen and (max-width: 1024px) {
+  .experience-page {
+    flex-direction: column;
+    padding: 2%;
+  }
+
+  .experience-content, .experience-image {
+    width: 100%;
+    padding: 2%;
+  }
+
+  .job p.description {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .experience-content h1 {
+    font-size: 2em;
+    margin-bottom: 0.8em;
+  }
+
+  .job {
+    margin-bottom: 4%;
+  }
+
+  .job-info .year {
+    font-size: 1.1em;
+    margin-right: 2em;
+    margin-bottom: 30px;
+  }
+
+  .job-info .job-icon {
+    max-width: 30px;
+    margin-bottom: 20px;
+  }
+
+  .job-info .job-details h1.role, .job-info .job-details h2.company {
+    font-size: 1em;
+  }
+
+  .job p.description {
+    font-size: 0.9em;
+    padding: 0 5%;
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .experience-content h1 {
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .job-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-info .year {
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .job-info .job-icon {
+    max-width: 28px;
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .job-info .job-details {
+    margin-left: 0;
+  }
+
+  .job-info .job-details h1.role, .job-info .job-details h2.company {
+    text-align: center;
+  }
+
+  .job p.description {
+    font-size: 0.8em;
+    padding: 0 3%;
+    margin-left: 0;
+  }
+}

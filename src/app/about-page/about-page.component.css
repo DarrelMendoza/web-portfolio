@@ -17,7 +17,7 @@
 
 .about-content h1 {
     color: #fff;
-    font-family: DM Sans;
+    font-family: 'Inter-SemiBold';
     font-weight: bold;
     font-size: 3.5em;
     margin-bottom: 1em;
@@ -25,7 +25,7 @@
 
 .about-content p {
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter-Regular';
     font-size: 1.5em;
     line-height: 1.6;
 }
@@ -41,4 +41,34 @@
 .about-image img {
     max-width: 80%; /* Adjust this value to control the size of the image */
     height: auto;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .about-page {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .about-content, .about-image {
+        width: 100%;
+    }
+    
+    .about-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .about-content p {
+        font-size: 1.2em;
+    }
+    
+    .about-image img {
+        max-width: 90%;
+    }
+    
+    .about-content {
+        margin-left: 0;
+    }
 }

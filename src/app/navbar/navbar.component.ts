@@ -4,19 +4,43 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.scss']
 })
 
 export class NavbarComponent implements OnInit {
 
+    // Existing code
+    isNavVisible: boolean = false;
+    isBurgerVisible: boolean = false;
+  
+    ngOnInit(): void {
+      // Existing code
+      this.onScroll();
+      this.checkScreenSize();
+    }
+  
+    toggleSideNav() {
+      this.isNavVisible = !this.isNavVisible;
+      if (this.isNavVisible) {
+        document.body.style.overflowY = 'hidden'; // Prevent body scroll when nav is open
+      } else {
+        document.body.style.overflowY = 'auto'; // Allow body scroll when nav is closed
+      }
+    }
+  
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      this.checkScreenSize();
+    }
+  
+    checkScreenSize() {
+      this.isBurgerVisible = window.innerWidth < 768; // Example width
+    }
+  
+
   constructor(private router: Router) { }
   activeLink: string = '/landing-page';
   previousActiveLink: string = '/landing-page';
-
-
-  ngOnInit(): void {
-    this.onScroll();
-  }
 
   isLinkActive(link: string): boolean {
     return this.activeLink === link;
@@ -62,7 +86,10 @@ onScroll() {
     { id: 'footer', link: '/contacts-page' }
   ];
 
+  
+
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  
 
   for (const section of sections) {
     const element = document.getElementById(section.id);

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 $main-color: #002733;
@@ -7,26 +6,21 @@ $dark-color: #001925;
 $light-color: #87A4B6;
 $medium-light-color: #013747;
 
-
 .box {
   flex: 1 1 15%;
-  // background:$dark-color;
-  // box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 24px;
-  // padding: 25px;
   text-align: center;
-  // border: 10px solid $medium-light-color;
-  transition: all 0.3s ease-in;      
-  // border-radius: 60% 33% 26% 67% / 51% 62% 28% 41%;     
+  transition: all 0.3s ease-in;
 
-  .image{
+  .image {
     transition: all 0.3s ease-in-out 0.1s;
-    img{
+
+    img {
       max-width: 75px;
       object-fit: contain;
     }
   }
 
-  .title{
+  .title {
     margin-top: 5px;
     text-align: center;
     font-weight: 470;
@@ -39,13 +33,15 @@ $medium-light-color: #013747;
     // box-shadow: rgba(0, 0, 0, 0.5) 20px 20px 30px;
     transform: scale(0.8);
 
-    .image{
+    .image {
       transform: scale(1.5) translateY(-20px);
-      img{
-        animation: bouncing 0.5s .3s; 
-      }          
+
+      img {
+        animation: bouncing 0.5s .3s;
+      }
     }
-    .title{
+
+    .title {
       letter-spacing: 2px;
       font-weight: 700;
       color: white;
@@ -53,27 +49,41 @@ $medium-light-color: #013747;
     }
   }
 
-  @media(max-width:1100px) {
-    flex: 1 0 25%;
-  }
-  @media(max-width:630px) {
-    flex: 1 0 35%;
-    padding: 15px;
-    .image {
+  // @media(max-width:1100px) {
+  //   flex: 1 0 25%;
+  // }
 
-      img{
-        max-width: 50px;
-      }
-    }
-  }
+  // @media(max-width:630px) {
+  //   flex: 1 0 35%;
+  //   padding: 15px;
+
+  //   .image {
+
+  //     img {
+  //       max-width: 50px;
+  //     }
+  //   }
+  // }
 }
 
-
 @keyframes bouncing {
-from, to { transform: scale(1, 1); }
-25% { transform: scale(0.9, 1.1); }
-50% { transform: scale(1.1, 0.9); }
-75% { transform: scale(0.95, 1.05); }
+
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }
 
 .skills-page {
@@ -82,7 +92,7 @@ from, to { transform: scale(1, 1); }
   flex-wrap: wrap;
   background-color: #f6f6f6;
   padding: 5% 5%;
-  height: 100vh;
+  height: 110vh;
 }
 
 .skills-content {
@@ -91,10 +101,10 @@ from, to { transform: scale(1, 1); }
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 5% 5%;
+  padding: 5%;
 }
 
-.h1container{
+.h1container {
   width: 50%;
   min-width: 300px;
   display: flex;
@@ -111,8 +121,8 @@ from, to { transform: scale(1, 1); }
   justify-content: flex-start;
   align-items: center;
   box-sizing: border-box;
-  margin-top: 18%;
-  padding-left: 5%;
+  margin-top: 225px;
+  padding: 5%;
 }
 
 .icon-set {
@@ -130,10 +140,10 @@ from, to { transform: scale(1, 1); }
 }
 
 .logos .year {
-    margin-right: 3.4em;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 40px;
+  margin-right: 3.4em;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
 .logos .job-icon {
@@ -147,8 +157,6 @@ from, to { transform: scale(1, 1); }
   font-size: 1.2em;
   font-weight: 620;
   margin-bottom: 8%;
-  margin-left: 30%;
-  margin-right: 30%;
 }
 
 .logos .logo-details h2.company {
@@ -165,33 +173,33 @@ from, to { transform: scale(1, 1); }
   margin-left: 60px;
 }
 
-.logo-details{
-    margin-left: 10px;
+.logo-details {
+  margin-left: 10px;
 }
 
 .logos .job-link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .logos .job-link:hover {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .logos .job-link:focus {
-    text-decoration: none;
-    color: inherit;
-    outline: none;
-  }
-  
-  .job-icon {
-    transition: transform 0.3s ease;
-  }
-  
-  .job-icon:hover {
-    transform: scale(1.1);
-  }
+  text-decoration: none;
+  color: inherit;
+}
+
+.logos .job-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logos .job-link:focus {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+.job-icon {
+  transition: transform 0.3s ease;
+}
+
+.job-icon:hover {
+  transform: scale(1.1);
+}
 
 /* Social Icon Mixin */
 @mixin social-icon($color) {
@@ -237,12 +245,12 @@ from, to { transform: scale(1, 1); }
       transform: translate(-50%, -150%);
     }
   }
-    
+
   &:active {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
   }
 
-    /* Color Variables */
+  /* Color Variables */
   $color-bootstrap: #553d7c;
   $color-javascript: #e4d04b;
   $color-html: #f15931;
@@ -254,6 +262,7 @@ from, to { transform: scale(1, 1); }
   $color-jasper: #005f9e;
   $color-tailwind: #01b7d6;
   $color-sass: #cf649a;
+  $color-less: #172b4a;
   $color-jquery: #0868ac;
   $color-chartjs: #f27175;
   $color-typescript: #2d79c7;
@@ -263,6 +272,7 @@ from, to { transform: scale(1, 1); }
   $color-mysql: #005c85;
   $color-phpmyadmin: #e76c00;
   $color-postgresql: #30628a;
+  $color-java: #3a75b0;
   $color-sqlite: #2f92ce;
   $color-plsql: #820b48;
   $color-talend: #183e66;
@@ -270,40 +280,118 @@ from, to { transform: scale(1, 1); }
   $color-nodejs: #92b54c;
   $color-vagrant: #1178f2;
 
+  &--bootstrap {
+    @include social-icon($color-bootstrap);
+  }
 
-  
-  &--bootstrap { @include social-icon($color-bootstrap); }
-  &--javascript { @include social-icon($color-javascript); }
-  &--html { @include social-icon($color-html); }
-  &--css { @include social-icon($color-css); }
-  &--react { @include social-icon($color-react); }
-  &--reactnative { @include social-icon($color-reactnative); }
-  &--angular { @include social-icon($color-angular); }
-  &--ionic { @include social-icon($color-ionic); }
-  &--jasper { @include social-icon($color-jasper); }
-  &--tailwind { @include social-icon($color-tailwind); }
-  &--sass { @include social-icon($color-sass); }
-  &--jquery { @include social-icon($color-jquery); }
-  &--chartjs { @include social-icon($color-chartjs); }
-  &--typescript { @include social-icon($color-typescript); }
-  &--php { @include social-icon($color-php); }
-  &--laravel { @include social-icon($color-laravel); }
-  &--aws { @include social-icon($color-aws); }
-  &--mysql { @include social-icon($color-mysql); }
-  &--phpmyadmin { @include social-icon($color-phpmyadmin); }
-  &--postgresql { @include social-icon($color-postgresql); }
-  &--sqlite { @include social-icon($color-sqlite); }
-  &--plsql { @include social-icon($color-plsql); }
-  &--talend { @include social-icon($color-talend); }
-  &--oracleapex { @include social-icon($color-oracleapex); }
-  &--nodejs { @include social-icon($color-nodejs); }
-  &--vagrant { @include social-icon($color-vagrant); }
+  &--javascript {
+    @include social-icon($color-javascript);
+  }
 
+  &--html {
+    @include social-icon($color-html);
+  }
 
+  &--css {
+    @include social-icon($color-css);
+  }
 
+  &--react {
+    @include social-icon($color-react);
+  }
 
+  &--reactnative {
+    @include social-icon($color-reactnative);
+  }
 
-  
+  &--angular {
+    @include social-icon($color-angular);
+  }
+
+  &--ionic {
+    @include social-icon($color-ionic);
+  }
+
+  &--jasper {
+    @include social-icon($color-jasper);
+  }
+
+  &--tailwind {
+    @include social-icon($color-tailwind);
+  }
+
+  &--sass {
+    @include social-icon($color-sass);
+  }
+
+  &--less {
+    @include social-icon($color-less);
+  }
+
+  &--jquery {
+    @include social-icon($color-jquery);
+  }
+
+  &--chartjs {
+    @include social-icon($color-chartjs);
+  }
+
+  &--typescript {
+    @include social-icon($color-typescript);
+  }
+
+  &--php {
+    @include social-icon($color-php);
+  }
+
+  &--laravel {
+    @include social-icon($color-laravel);
+  }
+
+  &--aws {
+    @include social-icon($color-aws);
+  }
+
+  &--mysql {
+    @include social-icon($color-mysql);
+  }
+
+  &--phpmyadmin {
+    @include social-icon($color-phpmyadmin);
+  }
+
+  &--postgresql {
+    @include social-icon($color-postgresql);
+  }
+
+  &--java {
+    @include social-icon($color-java);
+  }
+
+  &--sqlite {
+    @include social-icon($color-sqlite);
+  }
+
+  &--plsql {
+    @include social-icon($color-plsql);
+  }
+
+  &--talend {
+    @include social-icon($color-talend);
+  }
+
+  &--oracleapex {
+    @include social-icon($color-oracleapex);
+  }
+
+  &--nodejs {
+    @include social-icon($color-nodejs);
+  }
+
+  &--vagrant {
+    @include social-icon($color-vagrant);
+  }
+
   i {
     position: relative;
     top: 1px;
@@ -326,7 +414,7 @@ from, to { transform: scale(1, 1); }
   transform: translate(-50%, -100%);
   transition: all 0.3s ease;
   z-index: 1;
-  
+
   &:after {
     display: block;
     position: absolute;
@@ -346,3 +434,163 @@ from, to { transform: scale(1, 1); }
   width: 50px;
   height: 50px;
 }
+
+@media (max-width: 1975px) {
+  .skills-content2{
+    padding-top: 79px;
+  }
+}
+
+@media (max-width: 1750px) {
+  .skills-content2{
+    padding-top: 71px;
+  }
+}
+
+@media (max-width: 1675px) {
+  .skills-content2{
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 1650px) {
+  .social-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1580px) {
+  .skills-content2{
+    padding-top: 50px;
+  }
+  .skills-page{
+    height: 110vh;
+  }
+}
+
+@media (max-width: 1420px) {
+  .skills-content{
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .skills-content2{
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .social-icon {
+    width: 90px;
+    height: 90px;
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+  .skills-page{
+    display: block;
+    height: 125vh;
+  }
+  .icon-set {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+    box-sizing: border-box;
+  }
+  
+
+.logos{
+  text-align: center;
+}
+}
+
+
+
+@media (max-width: 1100px) {
+  .skills-content{
+    width: 100%;
+    padding-bottom: 0px;
+  }
+  .skills-content2{
+    width: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  .social-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .skills-page{
+    display: block;
+    height: 130vh;
+  }
+}
+
+@media (max-width: 585px) {
+  .skills-content{
+    width: 100%;
+  }
+  .skills-content2{
+    width: 100%;
+  }
+  .social-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  .skills-page{
+    display: block;
+  }
+  .logos{
+    text-align: center;
+  }
+}
+
+@media (max-width: 585px) {
+  .skills-content{
+    width: 100%;
+  }
+  .skills-content2{
+    width: 100%;
+  }
+  .social-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .skills-page{
+    display: block;
+    height: 70vh;
+  }
+  .logos{
+    text-align: center;
+  }
+  .box .title{
+    color: white;
+    font-size: 1px;
+  }
+}
+
+
+// @media (max-width: 630px) {
+//   .box {
+//     flex: 1 0 35%;
+//     padding: 15px;
+//   }
+// }

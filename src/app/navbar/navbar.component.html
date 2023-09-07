@@ -2,7 +2,10 @@
   <div class="logo">
       <img src="assets/all-white-logo-dm.png" width="60" alt="logo">
   </div>
-  <ul class="navigation">
+  <div class="burger" (click)="toggleSideNav()" *ngIf="isBurgerVisible">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul class="navigation" [ngClass]="{'show-nav': isNavVisible}">
     <li (click)="toLandingPage()" [ngClass]="{ 'active': isLinkActive('/landing-page') }">
       <a routerLink="/landing-page">Home</a>
     </li>
