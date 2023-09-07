@@ -57,7 +57,8 @@ body {
   font-size: 15px;
   margin-top: auto;
   margin-bottom: auto;
-  font-weight: 650;
+  /* font-weight: 650; */
+  font-family: 'Inter-Bold';
 }
 
 /* Add a bounce animation */
@@ -90,7 +91,7 @@ body {
   right: 40px;
   width: 450px;
   background-color: #f3f7f8;
-  border-radius: 15px;
+  border-radius: 8px;
   box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1) 0 32px 64px -48px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
   overflow: hidden;
@@ -109,6 +110,7 @@ body {
   background-color: #181717;
   text-align: center;
   padding: 16px 0;
+  font-family: 'Inter-SemiBold';
 }
 .chatbot__header span {
   display: none;

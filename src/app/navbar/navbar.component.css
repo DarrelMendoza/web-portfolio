@@ -28,9 +28,10 @@ ul {
 .navigation {
   list-style-type: none;
   display: flex;
-  font-family: DM Sans;
+  font-family: 'Inter-Regular';
+  font-size: 15px;
   cursor: pointer;
-  margin-right: 80px;
+  margin-right: 60px;
 }
 
 .navigation li {
