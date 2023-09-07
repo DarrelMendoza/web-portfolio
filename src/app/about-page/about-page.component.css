@@ -42,3 +42,33 @@
     max-width: 80%; /* Adjust this value to control the size of the image */
     height: auto;
 }
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .about-page {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    
+    .about-content, .about-image {
+        width: 100%;
+    }
+    
+    .about-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .about-content p {
+        font-size: 1.2em;
+    }
+    
+    .about-image img {
+        max-width: 90%;
+    }
+    
+    .about-content {
+        margin-left: 0;
+    }
+}

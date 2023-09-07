@@ -56,3 +56,59 @@
     /* background-color: #5f5f5f; Darker shade of grey on hover */
     transform: scale(1.05); /* Button slightly enlarges on hover */
 }
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .landing-content {
+      width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
+  }
+
+  .landing-content, .landing-image {
+      width: 100%;
+  }
+
+  .landing-content h1 {
+      font-size: 2.5em;
+  }
+
+  .landing-content h2 {
+      font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-content h1 {
+      font-size: 2em;
+  }
+
+  .landing-content h2 {
+      font-size: 1.2em;
+  }
+
+  .landing-content button {
+      font-size: 0.9em;
+  }
+}
+
+/* Specific styling for iPhone 13 and similar */
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 428px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .landing-content h1 {
+      font-size: 1.8em;
+  }
+
+  .landing-content h2 {
+      font-size: 1.1em;
+  }
+}
