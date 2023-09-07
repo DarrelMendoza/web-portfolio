@@ -111,13 +111,14 @@ body {
   text-align: center;
   padding: 16px 0;
   font-family: 'Inter-SemiBold';
+  color: white;
 }
 .chatbot__header span {
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 50%;
   right: 20px;
-  color: #202020;
+  color: white;
   transform: translateY(-50%);
   cursor: pointer;
 }

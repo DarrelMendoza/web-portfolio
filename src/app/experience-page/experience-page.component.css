@@ -113,15 +113,53 @@
   }
 
   /* Media Queries */
-@media only screen and (max-width: 1024px) {
+
+  @media only screen and (max-width: 1300px) {
+    .experience-page {
+      height: 140vh;
+    }
+  }
+
+@media only screen and (max-width: 1025px) {
   .experience-page {
     flex-direction: column;
-    padding: 2%;
+    padding: 10% ;
+    height: 160vh;
+    text-align: center;
+
   }
 
   .experience-content, .experience-image {
     width: 100%;
     padding: 2%;
+  }
+
+  .experience-image {
+    text-align: center;
+  }
+
+  .job p.description {
+    margin-left: 15px;
+  }
+}
+
+
+@media only screen and (max-width: 970px) {
+  .experience-page {
+    flex-direction: column;
+    padding: 10% ;
+    height: 170vh;
+    text-align: center;
+
+  }
+
+  .experience-content, .experience-image {
+    width: 100%;
+    padding: 2%;
+  }
+
+  .experience-image {
+    text-align: center;
   }
 
   .job p.description {
@@ -130,6 +168,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .experience-page {
+    height: 135vh;
+  }
+
   .experience-content h1 {
     font-size: 2em;
     margin-bottom: 0.8em;
@@ -161,7 +203,23 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 710px) {
+  .experience-page {
+    height: 145vh;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .experience-page {
+    height: 155vh;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  .experience-page {
+    height: 175vh;
+  }
+
   .experience-content h1 {
     font-size: 1.8em;
     text-align: center;
@@ -197,5 +255,11 @@
     font-size: 0.8em;
     padding: 0 3%;
     margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 405px) {
+  .experience-page {
+    height: 190vh;
   }
 }

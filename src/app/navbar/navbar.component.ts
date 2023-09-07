@@ -21,11 +21,11 @@ export class NavbarComponent implements OnInit {
   
     toggleSideNav() {
       this.isNavVisible = !this.isNavVisible;
-      if (this.isNavVisible) {
-        document.body.style.overflowY = 'hidden'; // Prevent body scroll when nav is open
-      } else {
-        document.body.style.overflowY = 'auto'; // Allow body scroll when nav is closed
-      }
+      // if (this.isNavVisible) {
+      //   document.body.style.overflowY = 'hidden'; // Prevent body scroll when nav is open
+      // } else {
+      //   document.body.style.overflowY = 'auto'; // Allow body scroll when nav is closed
+      // }
     }
   
     @HostListener('window:resize', ['$event'])
@@ -34,7 +34,7 @@ export class NavbarComponent implements OnInit {
     }
   
     checkScreenSize() {
-      this.isBurgerVisible = window.innerWidth < 768; // Example width
+      this.isBurgerVisible = window.innerWidth < 1121; // Example width
     }
   
 

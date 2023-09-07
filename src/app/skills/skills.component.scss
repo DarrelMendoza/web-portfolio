@@ -493,7 +493,7 @@ $medium-light-color: #013747;
   }
   .skills-page{
     display: block;
-    height: 125vh;
+    height: 150vh;
   }
   .icon-set {
     width: 100%;
@@ -576,7 +576,7 @@ $medium-light-color: #013747;
   }
   .skills-page{
     display: block;
-    height: 70vh;
+    height: 80vh;
   }
   .logos{
     text-align: center;
@@ -587,6 +587,41 @@ $medium-light-color: #013747;
   }
 }
 
+@media (max-width: 405px) {
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .social-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .icon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .social-icon {
+    width: 20px;
+    height: 20px;
+  }
+  .icon {
+    width: 10px;
+    height: 10px;
+  }
+}
 
 // @media (max-width: 630px) {
 //   .box {

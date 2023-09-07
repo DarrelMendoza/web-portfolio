@@ -1,3 +1,4 @@
+
 .landing-page {
     display: flex;
     height: 100vh;
@@ -60,19 +61,24 @@
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .landing-content {
-      width: 40%;
+      width: 50%;
   }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 875px) {
   .landing-page {
       flex-direction: column;
       height: auto;
-      padding: 20px;
   }
 
   .landing-content, .landing-image {
       width: 100%;
+  }
+
+  .landing-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .landing-content h1 {
