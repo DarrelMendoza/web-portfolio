@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,7 +25,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"            ],
+              "src/styles.css"
+            ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
@@ -53,8 +54,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "10kb",
+                  "maximumError": "15kb"
                 }
               ]
             }
@@ -122,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "darrel-mendoza"
+  "defaultProject": "darrel-mendoza",
+  "cli": {
+    "analytics": "d0939288-b390-4e23-be94-78a9d06477e9"
+  }
 }

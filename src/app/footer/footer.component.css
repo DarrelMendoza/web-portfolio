@@ -61,3 +61,38 @@
         display: none; /* Hide the image */
     }
 }
+
+@media (max-width: 440px) {
+    .about-content h1{
+        font-size: 30px !important;
+    }
+    .about-content{
+        font-size: 10px !important;
+    }
+    .links h1{
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 370px) {
+    .about-content {
+        text-align: center;
+        width: 100%;
+        font-size: 10px;
+    }
+    .about-image {
+        display: none; /* Hide the image */
+    }
+    .links h1{
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .about-content h1{
+        font-size: 25px !important;
+    }
+    .links h1{
+        font-size: 15px !important;
+    }
+}

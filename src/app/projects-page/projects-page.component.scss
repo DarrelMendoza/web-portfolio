@@ -4,11 +4,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 70vh;
+    height: 100%;
     text-align: center;
     background-color: #343434;
-    padding-top: 26%;
-    padding-bottom: 26%;
+    padding-top: 8%;
+    padding-bottom: 8%;
   }
   
   .header {
@@ -314,17 +314,17 @@ h2 {
   border: 2px solid #4a4a4b;
 }
 
-/* Responsive Layout */
-@media only screen and (max-width: 1350px) {
-  .sample-projects-container {
-    height: 100vh;
-  }
-}
+// /* Responsive Layout */
+// @media only screen and (max-width: 1350px) {
+//   .sample-projects-container {
+//     height: 100vh;
+//   }
+// }
 
 @media only screen and (max-width: 1200px) {
-  .sample-projects-container {
-    height: 250vh;
-  }
+  // .sample-projects-container {
+  //   height: 250vh;
+  // }
   .container {
       flex-direction: column;
       align-items: center;
@@ -332,6 +332,18 @@ h2 {
 }
 
 @media only screen and (max-width: 768px) {
+  .container .card{
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+  .container .card .face.face1 {
+    transform: translateY(0); /* Show face1 by default on smaller screens */
+  }
+
+  .container .card .face.face2 {
+    transform: translateY(0); /* Show face2 by default on smaller screens */
+  }
   .header {
       font-size: 2.5em;
   }
@@ -351,7 +363,49 @@ h2 {
   .sample-projects-container {
       padding-top: 10%;
       padding-bottom: 10%;
-      height: 195vh;
+      // height: 195vh;
+  }
+  .header {
+      padding-top: 50px;
+      font-size: 1.8em;
+  }
+  .container .card .face.face1 .content h3 {
+      font-size: 1em;
+  }
+  .btn {
+      width: 120px;
+      font-size: 10px;
+  }
+  .modal-content {
+      width: 95%;
+  }
+}
+
+@media only screen and (max-height: 670px) {
+  .sample-projects-container {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    // height: 275vh;
+}
+}
+
+// @media only screen and (max-width: 420px) {
+//   .sample-projects-container {
+//     height: 210vh;
+//   }
+// }
+
+// @media only screen and (max-width: 390px) {
+//   .sample-projects-container {
+//     height: 280vh;
+//   }
+// }
+
+@media only screen and (max-width: 370px) {
+  .sample-projects-container {
+      padding-top: 10%;
+      padding-bottom: 10%;
+      // height: 275vh;
   }
   .header {
       padding-top: 50px;

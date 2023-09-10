@@ -52,6 +52,11 @@ ngOnInit() {
     this.showChatBox = !this.showChatBox;
     document.getElementById('chatBubble').style.opacity = '0';
     document.getElementById('chatbotButton').style.animation = 'none';
+      // if (this.showChatBox) {
+      //   document.body.style.overflowY = 'hidden'; // Prevent body scroll when nav is open
+      // } else {
+      //   document.body.style.overflowY = 'auto'; // Allow body scroll when nav is closed
+      // }
   }
 
   addMessage(text: string, sender: string) {

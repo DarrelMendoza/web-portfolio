@@ -57,12 +57,22 @@ export class ProjectsPageComponent implements OnInit {
     const modal = document.getElementById('myModal');
     modal.style.display = 'block';
     this.modalOpen = true;
+    if (this.modalOpen) {
+      document.body.style.overflowY = 'hidden'; // Prevent body scroll when nav is open
+    } else {
+      document.body.style.overflowY = 'auto'; // Allow body scroll when nav is closed
+    }
   }
   
   closeModal() {
     const modal = document.getElementById('myModal');
     modal.style.display = 'none';
     this.modalOpen = false;
+    if (this.modalOpen) {
+      document.body.style.overflowY = 'hidden'; // Prevent body scroll when nav is open
+    } else {
+      document.body.style.overflowY = 'auto'; // Allow body scroll when nav is closed
+    }
   }
   
   changeImage(index: number) {

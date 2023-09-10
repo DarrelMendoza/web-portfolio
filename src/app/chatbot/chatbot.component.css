@@ -211,7 +211,28 @@ body {
   visibility: visible;
 }
 
+@media (max-height: 730px) {
+  .chatbot__button {
+    display: none;
+  }
+  .chatBubble {
+   display: none;
+  }
+  iframe{
+    display: none;
+  }
+  .chatbot {
+    display: none;
+  }
+}
+
+
 @media (max-width: 490px) {
+  iframe{
+    height: 90% !important;
+    min-height: 550px;
+  }
+
   .chatbot {
     right: 0;
     bottom: 0;
