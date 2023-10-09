@@ -5,10 +5,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 85vh;
+    height: 100vh;
     text-align: center;
-    padding: 0% 1%;
-    background-color: #343434;
+    padding: 20% 1%;
+    background-color: #f6f6f6;
 }
 
 .h1container{
@@ -18,18 +18,20 @@
     flex-direction: column;
     box-sizing: border-box;
     text-align: left;
-    padding-left: 12%;
+    padding-left: 8%;
+    padding-top: 45px;
   }
 
 .contribution-page h1 {
-    color: #fff;
-    font-family: DM Sans;
+    color: #212529;
+    font-family: 'Inter-SemiBold';
     font-weight: bold;
     font-size: 3.5em;
 }
 
 .graph {
-    margin-top: 0px;
+    margin-top: 45px;
+    margin-bottom: 45px;
     width: 78%;
     margin-left: auto;
     margin-right: auto;
@@ -48,7 +50,7 @@
 }
 
 .description p {
-    color: #fff;
+    color: #212529;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     line-height: 10px;
@@ -56,7 +58,7 @@
 }
 
 .description p a {
-    color: #fff;
+    color: #212529;
     text-decoration: none;
     font-weight: bold;
     font-style: italic;
@@ -69,3 +71,52 @@
     text-align: center;
     margin: 0 auto;
 } */
+
+
+@media only screen and (max-width: 1015px) {
+    .description {
+        width: 100%;
+        align-self: flex-end;
+        text-align: left;
+        margin-bottom: 7%;
+    }
+    .description p {
+        color: #212529;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        line-height: 10px;
+        margin-left: 6em;
+    }
+  }
+
+  @media only screen and (max-width: 590px) {
+    .description {
+        width: 100%;
+        align-self: flex-end;
+        text-align: left;
+        margin-bottom: 7%;
+    }
+    .description p {
+        color: #212529;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+        line-height: 10px;
+        margin-left: 3em;
+    }
+  }
+  
+  @media only screen and (max-width: 420px) {
+    .description {
+        width: 100%;
+        align-self: flex-end;
+        text-align: left;
+        margin-bottom: 7%;
+    }
+    .description p {
+        color: #212529;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        line-height: 10px;
+        margin-left: 3em;
+    }
+  }
