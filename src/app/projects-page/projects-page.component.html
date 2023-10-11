@@ -9,14 +9,13 @@
     <div class="card" (click)="openModal(0)">
         <div class="face face1" style="background-color: #3ebaad !important;">
             <div class="content">
-              <img src="./assets/medtechpro-white.png" alt="Image 1">
-              <h3>MEDTECHPRO <br> Hospital Management System</h3>
+              <img src="./assets/postnest-white.png" alt="Image 1">
+              <h3>POSTNEST <br> Social Media Site</h3>
             </div>
         </div>
         <div class="face face2">
             <div class="content">
-              <p>The Ultimate Hospital Management App designed to revolutionize 
-                healthcare administration. Made using Angular, PHP, Laravel, SQL
+              <p>PostNest is a social platform where users share and connect over spontaneous thoughts
               </p>
               <div class="btn" style="background-color: #3ebaad; color: #fff;" (click)="openModal(0)">LEARN MORE</div>
             </div>
@@ -31,8 +30,7 @@
         </div>
         <div class="face face2">
             <div class="content">
-                <p>The number one destination for all things trendy and fashionable!
-                   Made using PHP, HTML, CSS, Javascript, SQL
+                <p>An e-commerce platform designed to seamlessly connect businesses with their target audiences, offering an intuitive online shopping experience.
                 </p>
                 <div class="btn" style="background-color: #0687ff; color: #fff;" (click)="openModal(1)">LEARN MORE</div>
             </div>
@@ -41,14 +39,13 @@
     <div class="card" (click)="openModal(2)">
       <div class="face face1" style="background-color: #5a5a5a !important">
           <div class="content">
-            <img src="./assets/storefront-white.png" alt="Image 1">
-              <h3>STOREFRONT <br>2-Way Marketplace</h3>
+            <img src="./assets/budgetbuddy-white.png" alt="Image 1">
+              <h3>BUDGETBUDDY <br>Finance Manager</h3>
           </div>
       </div>
       <div class="face face2">
           <div class="content">
-              <p>Online platform that revolutionizes the way buyers and sellers interact in the digital marketplace. 
-                Created using Angular, PHP, Laravel, SQL
+              <p>A finance manager app designed to empower individuals with interactive tools for streamlined budgeting, expense tracking, and insightful financial planning.
               </p>
               <div class="btn" style="background-color: #5a5a5a; color: #fff;" (click)="openModal(2)">LEARN MORE</div>
           </div>
@@ -81,11 +78,13 @@
       </div>
       <div class="column-xs-12 column-md-5">
         <h1>{{ projectNames[currentProjectIndex] }}</h1>
-        <h2 style="font-size: 20px;">Revolutionizing {{ projectIndustries[currentProjectIndex] }}, One System at a Time.</h2>
+        <h2 style="font-size: 20px;">{{ projectTechnologies[currentProjectIndex] }}</h2>
         <div class="description">
           <p [innerHTML]="projectDescriptions[currentProjectIndex]"></p>
         </div>
-        <button class="add-to-cart">View Repository</button>
+        <a [href]="projectRepositories[currentProjectIndex]" target="_blank">
+          <button class="add-to-cart">View Repository</button>
+        </a>
       </div>
     </div>
   </div>

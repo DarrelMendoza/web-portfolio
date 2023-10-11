@@ -12,27 +12,33 @@ export class ProjectsPageComponent implements OnInit {
   selectedImageIndex: number = 0;
   
   projectImages: string[][] = [
-    ['./assets/projects/medtechpro-image1.png', './assets/projects/medtechpro-image2.png', './assets/projects/medtechpro-image3.png'],
-    ['./assets/projects/badbeat-image1.png', './assets/projects/badbeat-image2.png', './assets/projects/badbeat-image3.png'],
-    ['./assets/projects/storefront-image1.png', './assets/projects/storefront-image2.png', './assets/projects/storefront-image3.png']
+    ['./assets/projects/postnest-image1.png', './assets/projects/postnest-image2.png', './assets/projects/postnest-image3.png', './assets/projects/postnest-image4.png'],
+    ['./assets/projects/badbeat-image1.png', './assets/projects/badbeat-image2.png', './assets/projects/badbeat-image3.png', './assets/projects/badbeat-image4.png'],
+    ['./assets/projects/budgetbuddy-image1.png', './assets/projects/budgetbuddy-image2.png', './assets/projects/budgetbuddy-image3.png', './assets/projects/budgetbuddy-image4.png']
   ];
   
   projectNames: string[] = [
-    'MedTech Pro',
+    'PostNest',
     'BadBeat E-Commerce Website',
-    'Storefront 2-Way Marketplace'
+    'Budget Buddy'
   ];
   
-  projectIndustries: string[] = [
-    'Healthcare',
-    'Fashion',
-    'Online Marketplace'
+  projectTechnologies: string[] = [
+    'VueJS, Bootstrap, PHP, Laravel, and MySQL',
+    'HTML, CSS, Bootstrap, Javascript, PHP, and MySQL',
+    'Angular, Bootstrap PHP, Laravel, and MySQL'
   ];
   
   projectDescriptions: string[] = [
-    "Introducing MedTech Pro, the revolutionary hospital management app designed to streamline and enhance the efficiency of healthcare institutions. MedTech Pro is a comprehensive and intuitive solution that combines cutting-edge technology with advanced features to empower hospitals in providing top-notch patient care while optimizing operational workflows.<br><br>With MedTech Pro, hospitals can seamlessly manage various aspects of their operations, from patient admissions and appointments to billing and inventory management. The app's user-friendly interface ensures that healthcare professionals can navigate through its features effortlessly, saving time and reducing administrative burden.<br><br>MedTech Pro revolutionizes hospital management, enabling healthcare institutions to deliver exceptional patient care while optimizing operations. By leveraging the power of technology, hospitals can enhance efficiency, reduce costs, and ultimately improve patient outcomes. Experience the future of healthcare management with MedTech Pro.",
-    "BadBeat is an all-in-one digital marketplace featuring a diverse range of products from the latest electronics to fashionable clothing, from unique homeware to your favorite books, and much more. We understand that in the busy rhythm of life, convenience and speed matter the most, which is why we offer an easy-to-navigate interface, detailed product information, and a fast, reliable delivery service.<br><br>At BadBeat, we believe in the power of community. Our interactive features allow customers and sellers to connect, share experiences, and build relationships, all while making or facilitating secure, seamless transactions.<br><br>We prioritize your security, ensuring all transactions are protected with top-of-the-line encryption technologies. We are committed to providing you with a safe and secure platform to do business, because at BadBeat, the beat of trust never stops.",
-    "Discover a unique and dynamic platform with the Storefront 2-Way Marketplace! Our digital hub bridges the gap between buyers and sellers, providing a vibrant space for commerce in the modern world.<br><br>As a seller, you have the power to showcase your products to a wide, interested audience. Use our advanced tools and features to set up your virtual storefront, track inventory, and manage orders with ease. Whether you're selling handmade crafts, vintage clothes, digital assets, or other unique items, our platform gives you the space and support to grow your business.<br><br>As a buyer, explore a diverse marketplace where you can find exactly what you're looking for. From unique collectibles to everyday essentials, our storefronts offer a wide range of products to suit your needs. Use the intelligent search and filter system to narrow down your options, read detailed product descriptions, and browse through customer reviews for informed purchasing decisions."
+    "PostNest is an engaging social media platform dedicated to capturing and sharing spontaneous thoughts. Crafted for those moments of inspiration, introspection, or simple daydreaming, it provides a space for users to effortlessly express and connect over shared sentiments.<br><br>On the frontend, the site utilizes <b>Vue 2</b>, a progressive JavaScript framework known for its adaptability and reactivity. This ensures that users encounter a fluid and dynamic experience when navigating through the platform and sharing their thoughts. Complementing Vue 2's capabilities, <b>Bootstrap</b> is integrated to guarantee that the platform's design remains not only aesthetically pleasing but also fully responsive. Whether accessed from a laptop or a mobile device, users are assured of a seamless experience.<br><br>The backend framework of choice is <b>Laravel</b>, a renowned <b>PHP</b> web application framework celebrated for its elegance, simplicity, and functionality. Its seamless integration with <b>MySQL</b> ensures robust and efficient data management. This combination ensures that every user's posts, interactions, and profiles are securely stored, easily retrievable, and consistently managed.",
+    "Badbeat is a digital marketplace designed to bridge the gap between businesses and their target audience. With an emphasis on user experience, this platform provides a seamless shopping journey, ensuring users find what they're looking for and sellers can manage their inventories efficiently.<br><br>The site's frontend is crafted using <b>HTML</b>, giving structure to content. <b>CSS</b> adorns this foundation, ensuring a visually captivating user interface. <b>JavaScript</b> powers the site's dynamic interactions, ensuring users experience smooth navigation. The addition of <b>Bootstrap</b> ensures that the site is adaptive across various devices, from desktops to smartphones, guaranteeing optimal viewing.<br><br>On the backend, <b>PHP</b> handles data processing tasks and interacts efficiently with the frontend, managing functionalities from user sign-ins to product listings. <b>MySQL</b>, a robust relational database management system, takes care of data storage and retrieval, handling everything from user profiles to transaction details.",
+    "Budget Buddy is a comprehensive finance manager application tailored to empower individuals in their financial journey. With a focus on clarity, simplicity, and efficiency, it aims to transform the often-daunting task of personal finance management into a streamlined and enlightening experience.<br><br>For the frontend, Budget Buddy leverages the power of <b>Angular</b>, a sophisticated and modular JavaScript framework. With Angular at the helm, the app delivers a seamless and dynamic user interface, enhancing real-time data interactions and visualization. Working hand-in-hand with Angular, <b>Bootstrap</b> ensures that the app’s layout is both visually appealing and responsive. This combination guarantees users a consistent and optimized experience across diverse devices, from desktops to mobile phones.<br><br>The backend is meticulously constructed using <b>Laravel</b>, a robust <b>PHP</b> web application framework known for its scalability and security features. Paired with Laravel's capabilities, <b>MySQL</b> serves as the database management system, ensuring that user data—be it transaction histories, budget allocations, or savings goals—is securely stored, easily accessible, and efficiently processed."
+  ];
+
+  projectRepositories: string[] = [
+    'https://github.com/DarrelMendoza/authentication-form#postnest-social-media-site',
+    'https://github.com/DarrelMendoza/badbeat-ecommerce-site#badbeat-e-commerce-site',
+    'https://github.com/Finance-Manager-Application/finance-app-ui#financeapp'
   ];
 
   constructor(private renderer: Renderer2, private el: ElementRef) { }
