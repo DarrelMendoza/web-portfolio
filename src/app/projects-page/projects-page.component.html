@@ -62,7 +62,7 @@
     <div class="close" (click)="closeModal()">&times;</div>
     
     <div class="grid product">
-      <div class="column-xs-12 column-md-7">
+      <div class="column-xs-12 column-md-7 imageslist">
         <div class="product-gallery">
           <div class="product-image">
             <!-- Here we bind the currentImage to the img src -->
@@ -76,7 +76,7 @@
           </ul>
         </div>
       </div>
-      <div class="column-xs-12 column-md-5">
+      <div class="column-xs-12 column-md-5 descriptionlist">
         <h1>{{ projectNames[currentProjectIndex] }}</h1>
         <h2 style="font-size: 20px;">{{ projectTechnologies[currentProjectIndex] }}</h2>
         <div class="description">

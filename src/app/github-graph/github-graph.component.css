@@ -120,3 +120,12 @@
         margin-left: 3em;
     }
   }
+
+  @media (max-width: 390px) {
+    .h1container h1 {
+      font-size: 30px !important;
+    }
+    .logo-details h1 {
+      font-size: 1em !important;
+    }
+  }
