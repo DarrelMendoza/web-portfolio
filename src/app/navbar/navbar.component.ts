@@ -51,19 +51,23 @@ export class NavbarComponent implements OnInit {
   }
 
   toAboutPage(){
-    document.getElementById("about-page").scrollIntoView({behavior:"smooth"});
+    document.getElementById("about").scrollIntoView({behavior:"smooth"});
   }
 
   toExperiencePage(){
-    document.getElementById("experience-page").scrollIntoView({behavior:"smooth"});
+    document.getElementById("experience").scrollIntoView({behavior:"smooth"});
   }
 
   toSkillsPage(){
-    document.getElementById("skills-page").scrollIntoView({behavior:"smooth"});
+    document.getElementById("skills").scrollIntoView({behavior:"smooth"});
   }
 
   toProjectsPage(){
-    document.getElementById("projects-page").scrollIntoView({behavior:"smooth"});
+    document.getElementById("projects").scrollIntoView({behavior:"smooth"});
+  }
+
+  toContributionsPage(){
+    document.getElementById("contributions").scrollIntoView({behavior:"smooth"});
   }
 
   toBlogsPage(){
@@ -71,19 +75,20 @@ export class NavbarComponent implements OnInit {
   }
 
   toContactsPage(){
-    document.getElementById("footer").scrollIntoView({behavior:"smooth"});
+    document.getElementById("contact").scrollIntoView({behavior:"smooth"});
   }
 
   @HostListener('window:scroll', ['$event'])
 onScroll() {
   const sections = [
     { id: 'landing-page', link: '/landing-page' },
-    { id: 'about-page', link: '/about-page' },
-    { id: 'experience-page', link: '/experience-page' },
-    { id: 'skills-page', link: '/skills-page' },
-    { id: 'projects-page', link: '/projects-page' },
+    { id: 'about', link: '/about' },
+    { id: 'experience', link: '/experience' },
+    { id: 'skills', link: '/skills' },
+    { id: 'projects', link: '/projects' },
+    { id: 'contributions', link: '/contributions' },
     { id: 'blogs-page', link: '/blogs-page' },
-    { id: 'footer', link: '/contacts-page' }
+    { id: 'contact', link: '/contact' }
   ];
 
   
