@@ -1,46 +1,69 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { Location } from '@angular/common';
+import { Subject } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+export class NavbarComponent implements OnInit, OnDestroy {
+  isNavVisible: boolean = false;
+  isBurgerVisible: boolean = false;
+  private scrollEvents = new Subject<Event>();
+  activeLink: string = '/';
+  previousActiveLink: string = '/';
 
-export class NavbarComponent implements OnInit {
+  constructor(private router: Router, private location: Location) { }
 
-    // Existing code
-    isNavVisible: boolean = false;
-    isBurgerVisible: boolean = false;
-  
-    ngOnInit(): void {
-      // Existing code
-      this.onScroll();
-      this.checkScreenSize();
-    }
-  
-    toggleSideNav() {
-      this.isNavVisible = !this.isNavVisible;
-      // if (this.isNavVisible) {
-      //   document.body.style.overflowY = 'hidden'; // Prevent body scroll when nav is open
-      // } else {
-      //   document.body.style.overflowY = 'auto'; // Allow body scroll when nav is closed
-      // }
-    }
-  
-    @HostListener('window:resize', ['$event'])
-    onResize(event) {
-      this.checkScreenSize();
-    }
-  
-    checkScreenSize() {
-      this.isBurgerVisible = window.innerWidth < 1121; // Example width
-    }
-  
+  ngOnInit(): void {
+    this.handleNavigation(this.router.url); 
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.handleNavigation(event.url);
+      }
+    });
+    this.checkScreenSize();
 
-  constructor(private router: Router) { }
-  activeLink: string = '/landing-page';
-  previousActiveLink: string = '/landing-page';
+    this.scrollEvents.pipe(
+      debounceTime(100)
+    ).subscribe((event) => this.handleScroll(event));
+  }
+
+  ngOnDestroy(): void {
+    this.scrollEvents.unsubscribe();
+  }
+
+  private handleNavigation(url: string) {
+    setTimeout(() => {
+      const path = url.split('/')[1];
+      switch (path) {
+        case '': this.toLandingPage(); break;
+        case 'about': this.toAboutPage(); break;
+        case 'experience': this.toExperiencePage(); break;
+        case 'skills': this.toSkillsPage(); break;
+        case 'projects': this.toProjectsPage(); break;
+        case 'contributions': this.toContributionsPage(); break;
+        case 'contact': this.toContactsPage(); break;
+        default: this.toLandingPage(); break;
+      }
+    }, 500);
+  }
+
+  toggleSideNav() {
+    this.isNavVisible = !this.isNavVisible;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.isBurgerVisible = window.innerWidth < 1121;
+  }
 
   isLinkActive(link: string): boolean {
     return this.activeLink === link;
@@ -70,39 +93,53 @@ export class NavbarComponent implements OnInit {
     document.getElementById("contributions").scrollIntoView({behavior:"smooth"});
   }
 
-  toBlogsPage(){
-    document.getElementById("blogs-page").scrollIntoView({behavior:"smooth"});
-  }
-
   toContactsPage(){
     document.getElementById("contact").scrollIntoView({behavior:"smooth"});
   }
 
   @HostListener('window:scroll', ['$event'])
-onScroll() {
-  const sections = [
-    { id: 'landing-page', link: '/landing-page' },
-    { id: 'about', link: '/about' },
-    { id: 'experience', link: '/experience' },
-    { id: 'skills', link: '/skills' },
-    { id: 'projects', link: '/projects' },
-    { id: 'contributions', link: '/contributions' },
-    { id: 'blogs-page', link: '/blogs-page' },
-    { id: 'contact', link: '/contact' }
-  ];
+  onScroll(event: Event) {
+    this.scrollEvents.next(event);
+  }
 
+  private handleScroll(event: Event) {
+    const sections = [
+      { id: 'landing-page', link: '/' },
+      { id: 'about', link: '/about' },
+      { id: 'experience', link: '/experience' },
+      { id: 'skills', link: '/skills' },
+      { id: 'projects', link: '/projects' },
+      { id: 'contributions', link: '/contributions' },
+      { id: 'contact', link: '/contact' }
+    ];
   
-
-  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    let currentSection: string | null = null;
   
-
-  for (const section of sections) {
-    const element = document.getElementById(section.id);
-    if (element && scrollPosition >= element.offsetTop - 100) {
+    // Check if the user has scrolled to the top of the page
+    if (scrollPosition < 1) { // Adjust the threshold value as needed
+      currentSection = '/';
+    } else {
+      for (const section of sections) {
+        const element = document.getElementById(section.id);
+        if (element) {
+          const elementTop = element.offsetTop;
+          const elementHeight = element.offsetHeight;
+          const inView = (scrollPosition >= elementTop - window.innerHeight * 0.3) && 
+                         (scrollPosition < elementTop + elementHeight - window.innerHeight * 0.3);
+  
+          if (inView) {
+            currentSection = section.link;
+            break;
+          }
+        }
+      }
+    }
+  
+    if (currentSection && this.activeLink !== currentSection) {
       this.previousActiveLink = this.activeLink;
-      this.activeLink = section.link;
+      this.activeLink = currentSection;
+      this.location.replaceState(currentSection);
     }
   }
-}
-
 }

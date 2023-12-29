@@ -6,7 +6,7 @@
     <i class="fas fa-bars"></i>
   </div>
   <ul class="navigation" [ngClass]="{'show-nav': isNavVisible}">
-    <li (click)="toLandingPage()" [ngClass]="{ 'active': isLinkActive('/landing-page') }">
+    <li (click)="toLandingPage()" [ngClass]="{ 'active': isLinkActive('/') }">
       <a routerLink="/landing-page">Home</a>
     </li>
     <li (click)="toAboutPage()" [ngClass]="{ 'active': isLinkActive('/about') }">
