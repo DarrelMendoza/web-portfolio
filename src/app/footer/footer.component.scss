@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.about-page {
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+}
+
+.about-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0%; /* Add some padding to the text */
+}
+
+.about-content h1 {
+    color: #fff;
+    font-family: 'Inter-Bold';
+    font-size: 3.5em;
+    margin-bottom: 1em;
+}
+
+.about-content p {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.about-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%; /* Add some padding to the image */
+}
+
+.about-image img {
+    width: 85%; /* Adjust this value to control the size of the image */
+    height: auto;
+}
+
+.buy-me-a-coffee {
+    width: 215px;
+    margin-top: 30px;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffdd00;
+    border: 1px solid #000; /* Adjust the color to match your design */
+    border-radius: 25px; /* This gives the rounded corners */
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+    cursor: pointer;
+    text-decoration: none; /* Removes underline from the link */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Add transition for smooth effect */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Slightly scale down the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow to give depth effect */
+}
+
+.button-icon {
+    width: 22px;
+    height: 30px;
+    vertical-align: middle; /* Aligns the icon vertically with the text */
+    margin-right: 1px; /* Space between the icon and the text */
+    margin-left: 1px;
+}
+
+.btn {
+    font-family: 'Pacifico', cursive; 
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    color: #000;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Add transition for smooth effect */
+
+  
+    // liquid button
+  
+    &--liquidBtn {
+      overflow: hidden;
+      span {
+        position: relative;
+        z-index: 1;
+      }
+      &:hover div {
+        top: -120px;
+      }
+      div {
+        position: absolute;
+        top: -90px;
+        left: 0;
+        width: 200px;
+        height: 190px;
+        background: #ffdd00;
+        box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+  
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 200%;
+          height: 200%;
+          transform: translate(-50%, -75%);
+        }
+        &::before {
+          border-radius: 45%;
+          background: rgba(20, 20, 20, 1);
+          animation: liquidAnimation 10s linear infinite;
+        }
+        &::after {
+          border-radius: 40%;
+          background: rgba(20, 20, 20, 0.5);
+          animation: liquidAnimation 10s linear infinite;
+        }
+        @keyframes liquidAnimation {
+          0% {
+            transform: translate(-50%, -75%) rotate(0deg);
+          }
+          100% {
+            transform: translate(-50%, -75%) rotate(360deg);
+          }
+        }
+      }
+    }
+ 
+  }
+
+
+
+
+
+
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .about-content {
+        text-align: center;
+        width: 100%;
+    }
+    .about-image {
+        display: none; /* Hide the image */
+    }
+    .buy-me-a-coffee {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .about-content {
+        text-align: center;
+        width: 100%;
+    }
+    .about-image {
+        display: none; /* Hide the image */
+    }
+}
+
+@media (max-width: 440px) {
+    .about-content h1{
+        font-size: 30px !important;
+    }
+    .about-content{
+        font-size: 10px !important;
+    }
+    .links h1{
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 370px) {
+    .about-content {
+        text-align: center;
+        width: 100%;
+        font-size: 10px;
+    }
+    .about-image {
+        display: none; /* Hide the image */
+    }
+    .links h1{
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .about-content h1{
+        font-size: 25px !important;
+    }
+    .links h1{
+        font-size: 15px !important;
+    }
+}
